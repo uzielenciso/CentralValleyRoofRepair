@@ -97,23 +97,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
-
-        /* Video Background Styling */
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            overflow: hidden;
-        }
-
-        .video-background video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            background: url('roofing.jpeg') no-repeat center center/cover;
         }
 
         /* Dark overlay to ensure crisp contrast for forms and text */
@@ -124,7 +108,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.88) 100%);
-            z-index: -1;
+            z-index: 1;
         }
 
         nav {
@@ -136,7 +120,6 @@
             z-index: 10;
         }
 
-        /* Updated Logo Typography */
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 32px;
@@ -145,7 +128,7 @@
         }
 
         .logo span {
-            color: #f97316; /* High-conversion Roofing Orange */
+            color: #f97316;
             font-style: italic;
         }
 
@@ -481,12 +464,6 @@
 <body>
 
 <header>
-    <!-- Seamless Drone Video Background -->
-    <div class="video-background">
-        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=80">
-            <source src="https://assets.mixkit.co/videos/32015/32015-720.mp4" type="video/mp4">
-        </video>
-    </div>
     <div class="video-overlay"></div>
 
     <nav>
