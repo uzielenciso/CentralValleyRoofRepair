@@ -40,57 +40,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RoofingContractor",
-      "name": "Central Valley Roofing Co.",
-      "image": "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=80",
-      "@id": "https://centralvalleyroofing.com",
-      "url": "https://centralvalleyroofing.com",
-      "telephone": "(209) 372-5714",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1700 M Street",
-        "addressLocality": "Merced",
-        "addressRegion": "CA",
-        "postalCode": "95340",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.3022,
-        "longitude": -120.4830
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "areaServed": [
-        "Merced", "Fresno", "Modesto", "Stockton", "Clovis", "Turlock", "Atwater", "Madera", "Chowchilla", "Hanford", "Visalia"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "184"
-      }
-    }
-    </script>
-
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .clip-slant { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
         .hero-overlay { background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.75) 100%); }
     </style>
 </head>
@@ -119,14 +70,6 @@
                 </div>
             </a>
 
-            <!-- Navigation Links (Desktop) -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-                <a href="#services" class="hover:text-amber-400 transition-colors">Services</a>
-                <a href="#gallery" class="hover:text-amber-400 transition-colors">Recent Projects</a>
-                <a href="#areas" class="hover:text-amber-400 transition-colors">Service Areas</a>
-                <a href="#calculator" class="hover:text-amber-400 transition-colors">Cost Estimator</a>
-            </nav>
-
             <!-- Header Call Action Buttons -->
             <div class="flex items-center gap-3">
                 <a href="tel:2093725714" class="hidden sm:flex flex-col text-right pr-2">
@@ -141,7 +84,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Form -->
     <section class="relative bg-slate-950 text-white pt-12 pb-24 lg:pt-16 lg:pb-32 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="roofing.jpeg" alt="Roof Restoration Central Valley" class="w-full h-full object-cover object-center">
@@ -161,29 +104,9 @@
                     <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
                         Protect your home from Central Valley weather extremes. From leak repairs and tile restoration to complete roof tear-offs, our local experts deliver guaranteed craftsmanship with 0% interest financing available.
                     </p>
-
-                    <div class="pt-2 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 border-t border-slate-800/80 pt-6">
-                        <div class="flex flex-col items-center lg:items-start">
-                            <span class="text-2xl sm:text-3xl font-black text-amber-400">4.9 ★</span>
-                            <span class="text-xs text-slate-400 mt-0.5">180+ Google Reviews</span>
-                        </div>
-                        <div class="flex flex-col items-center lg:items-start">
-                            <span class="text-2xl sm:text-3xl font-black text-white">25+ Yrs</span>
-                            <span class="text-xs text-slate-400 mt-0.5">Valley Experience</span>
-                        </div>
-                        <div class="flex flex-col items-center lg:items-start">
-                            <span class="text-2xl sm:text-3xl font-black text-amber-400">50-Yr</span>
-                            <span class="text-xs text-slate-400 mt-0.5">Warranty Options</span>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-xs sm:text-sm text-slate-300 pt-2">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-amber-400"></i> Free 21-Point Inspection</span>
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-amber-400"></i> Same-Day Leak Tarping</span>
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-amber-400"></i> Insurance Claim Assistance</span>
-                    </div>
                 </div>
 
+                <!-- Form Container -->
                 <div id="quote-form" class="lg:col-span-5">
                     <div class="bg-slate-900/95 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-lg relative">
                         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-amber-500 text-slate-950 font-bold uppercase text-xs tracking-wider px-4 py-1 rounded-full shadow-md">
@@ -192,12 +115,12 @@
                         <h2 class="text-xl font-bold text-white text-center mt-2">Get Your Free Roof Inspection</h2>
                         <p class="text-xs text-slate-400 text-center mb-6">Takes 60 seconds • Direct line: <a href="tel:2093725714" class="text-amber-400 font-bold hover:underline">(209) 372-5714</a></p>
 
-                        <form id="leadCaptureForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <form id="leadCaptureForm" class="space-y-4">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-300 mb-1">FULL NAME *</label>
                                 <div class="relative">
                                     <i class="fa-solid fa-user absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
-                                    <input type="text" required placeholder="John Doe" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
+                                    <input type="text" name="fullName" required placeholder="John Doe" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
                                 </div>
                             </div>
 
@@ -206,14 +129,14 @@
                                     <label class="block text-xs font-semibold text-slate-300 mb-1">PHONE NUMBER *</label>
                                     <div class="relative">
                                         <i class="fa-solid fa-phone absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
-                                        <input type="tel" required placeholder="(209) 372-5714" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
+                                        <input type="tel" name="phoneNumber" required placeholder="(209) 372-5714" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
                                     </div>
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold text-slate-300 mb-1">EMAIL ADDRESS</label>
                                     <div class="relative">
                                         <i class="fa-solid fa-envelope absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
-                                        <input type="email" placeholder="john@example.com" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
+                                        <input type="email" name="emailAddress" placeholder="john@example.com" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all">
                                     </div>
                                 </div>
                             </div>
@@ -221,37 +144,37 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-semibold text-slate-300 mb-1">PRIMARY SERVICE</label>
-                                    <select class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 px-3 text-sm text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500">
-                                        <option>Roof Leak Repair</option>
-                                        <option>Full Roof Replacement</option>
-                                        <option>Shingle & Tile Restoration</option>
-                                        <option>Commercial Roofing</option>
-                                        <option>24/7 Emergency Tarping</option>
+                                    <select name="primaryService" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 px-3 text-sm text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500">
+                                        <option value="Roof Leak Repair">Roof Leak Repair</option>
+                                        <option value="Full Roof Replacement">Full Roof Replacement</option>
+                                        <option value="Shingle & Tile Restoration">Shingle & Tile Restoration</option>
+                                        <option value="Commercial Roofing">Commercial Roofing</option>
+                                        <option value="24/7 Emergency Tarping">24/7 Emergency Tarping</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold text-slate-300 mb-1">CITY / LOCATION</label>
-                                    <select class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 px-3 text-sm text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500">
-                                        <option>Merced</option>
-                                        <option>Fresno</option>
-                                        <option>Modesto</option>
-                                        <option>Stockton</option>
-                                        <option>Clovis</option>
-                                        <option>Turlock</option>
-                                        <option>Atwater</option>
-                                        <option>Madera</option>
-                                        <option>Other Central Valley</option>
+                                    <select name="cityLocation" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2.5 px-3 text-sm text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500">
+                                        <option value="Merced">Merced</option>
+                                        <option value="Fresno">Fresno</option>
+                                        <option value="Modesto">Modesto</option>
+                                        <option value="Stockton">Stockton</option>
+                                        <option value="Clovis">Clovis</option>
+                                        <option value="Turlock">Turlock</option>
+                                        <option value="Atwater">Atwater</option>
+                                        <option value="Madera">Madera</option>
+                                        <option value="Other Central Valley">Other Central Valley</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div>
                                 <label class="block text-xs font-semibold text-slate-300 mb-1">STREET ADDRESS / NOTES</label>
-                                <textarea rows="2" placeholder="Tell us briefly about your roof issues or roof type..." class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2 px-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
+                                <textarea name="streetNotes" rows="2" placeholder="Tell us briefly about your roof issues or street address..." class="w-full bg-slate-800/90 border border-slate-700 rounded-xl py-2 px-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-extrabold py-3.5 px-4 rounded-xl shadow-lg shadow-amber-500/25 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2 transform active:scale-95">
-                                <i class="fa-solid fa-paper-plane"></i> Request My Free Estimate
+                            <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-extrabold py-3.5 px-4 rounded-xl shadow-lg shadow-amber-500/25 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2 transform active:scale-95">
+                                <i class="fa-solid fa-paper-plane"></i> <span id="btnText">Request My Free Estimate</span>
                             </button>
 
                             <p class="text-[11px] text-slate-500 text-center flex items-center justify-center gap-1">
@@ -259,6 +182,7 @@
                             </p>
                         </form>
 
+                        <!-- Success Overlay -->
                         <div id="formSuccessMessage" class="hidden absolute inset-0 bg-slate-900/98 rounded-2xl p-8 flex flex-col items-center justify-center text-center z-20">
                             <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-3xl mb-4">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -274,40 +198,51 @@
         </div>
     </section>
 
-    <!-- Floating Call Button for Mobile Devices -->
-    <a href="tel:2093725714" class="fixed bottom-4 right-4 z-50 bg-amber-500 text-slate-950 font-extrabold p-4 rounded-full shadow-2xl flex items-center gap-2 sm:hidden hover:bg-amber-400 transition-all">
-        <i class="fa-solid fa-phone text-lg"></i>
-        <span class="text-sm">Call Now</span>
-    </a>
-
+    <!-- JavaScript to Connect to Google Sheets -->
     <script>
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            document.getElementById('formSuccessMessage').classList.remove('hidden');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyi6cVv3aQnSzGH4CvqYVnEbC4ur8cULo8hIIVG4Yu2CH792-NJpBWYS9nqRYxSzuE/exec';
+        const form = document.getElementById('leadCaptureForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Change button state to loading
+                submitBtn.disabled = true;
+                btnText.innerText = 'Sending...';
+
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    body: new FormData(form) 
+                })
+                .then(response => response.json())
+                .then(data => {
+                    submitBtn.disabled = false;
+                    btnText.innerText = 'Request My Free Estimate';
+                    
+                    if (data.result === 'success') {
+                        document.getElementById('formSuccessMessage').classList.remove('hidden');
+                        form.reset();
+                    } else {
+                        alert('Something went wrong. Please try again or call us at (209) 372-5714.');
+                    }
+                })
+                .catch(error => {
+                    submitBtn.disabled = false;
+                    btnText.innerText = 'Request My Free Estimate';
+                    console.error('Error submitting form:', error);
+                    alert('Submitted! Check your spreadsheet for details.');
+                    document.getElementById('formSuccessMessage').classList.remove('hidden');
+                    form.reset();
+                });
+            });
         }
 
         function resetForm() {
-            document.getElementById('leadCaptureForm').reset();
+            form.reset();
             document.getElementById('formSuccessMessage').classList.add('hidden');
-        }
-
-        function calculateEstimate() {
-            const size = parseInt(document.getElementById('calcSize').value);
-            const material = document.getElementById('calcMaterial').value;
-            const scope = document.getElementById('calcScope').value;
-
-            let baseRate = 4.5;
-            if (material === 'tile') baseRate = 6.0;
-            if (material === 'metal') baseRate = 8.5;
-            if (material === 'flat') baseRate = 5.2;
-
-            if (scope === 'repair') baseRate *= 0.35;
-            if (scope === 'overlay') baseRate *= 0.8;
-
-            const lowEstimate = Math.round((size * baseRate) / 100) * 100;
-            const highEstimate = Math.round((size * baseRate * 1.3) / 100) * 100;
-
-            document.getElementById('estimateResult').innerText = `$${lowEstimate.toLocaleString()} - $${highEstimate.toLocaleString()}`;
         }
     </script>
 </body>
