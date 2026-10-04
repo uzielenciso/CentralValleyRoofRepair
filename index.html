@@ -198,9 +198,9 @@
         </div>
     </section>
 
-    <!-- JavaScript to Connect to Google Sheets -->
+    <!-- JavaScript to Post Form Entries directly to Google Sheets -->
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyi6cVv3aQnSzGH4CvqYVnEbC4ur8cULo8hIIVG4Yu2CH792-NJpBWYS9nqRYxSzuE/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwNDc5iphGsBeY2fHBYanENobNmvooZ1cljIOZyuTioVfb3LCrtlVALzSp0oJMF9PIemw/exec';
         const form = document.getElementById('leadCaptureForm');
         const submitBtn = document.getElementById('submitBtn');
         const btnText = document.getElementById('btnText');
@@ -209,33 +209,31 @@
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
 
-                // Change button state to loading
                 submitBtn.disabled = true;
                 btnText.innerText = 'Sending...';
 
+                const formData = new FormData(form);
+                const params = new URLSearchParams(formData);
+
                 fetch(scriptURL, { 
-                    method: 'POST', 
-                    body: new FormData(form) 
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: params.toString()
                 })
-                .then(response => response.json())
-                .then(data => {
+                .then(() => {
                     submitBtn.disabled = false;
                     btnText.innerText = 'Request My Free Estimate';
-                    
-                    if (data.result === 'success') {
-                        document.getElementById('formSuccessMessage').classList.remove('hidden');
-                        form.reset();
-                    } else {
-                        alert('Something went wrong. Please try again or call us at (209) 372-5714.');
-                    }
+                    document.getElementById('formSuccessMessage').classList.remove('hidden');
+                    form.reset();
                 })
                 .catch(error => {
                     submitBtn.disabled = false;
                     btnText.innerText = 'Request My Free Estimate';
                     console.error('Error submitting form:', error);
-                    alert('Submitted! Check your spreadsheet for details.');
-                    document.getElementById('formSuccessMessage').classList.remove('hidden');
-                    form.reset();
+                    alert('There was an issue sending your form. Please call us at (209) 372-5714.');
                 });
             });
         }
